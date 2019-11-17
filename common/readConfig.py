@@ -14,6 +14,9 @@ class Readconfig():
     def get_url(self,name):
         value = self.config.get('HTTP', name)
         return value
+    def get_db(self,name):
+        value = self.config.get('MYSQL',name)
+        return value
 if __name__ == '__main__':
     b =Readconfig()
-    print(b.get_url('url'))
+    print(b.get_db('testuser'))
